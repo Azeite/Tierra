@@ -1,4 +1,4 @@
-        var map;
+var map;
         //initMap() called when Google Maps API code is loaded - when web page is opened/refreshed 
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -122,7 +122,7 @@
                                 var lat = marker.position.lat();
                                 var lng = marker.position.lng();
                                 // You need to use the FREE signup at https://www.apixu.com/ to get a key for the Weather URL below
-                                theURL = 'http://api.apixu.com/v1/current.json?key=aee1f4bcd581463f8c3104119182910&q=' + lat.toFixed(4) + ',' + lng.toFixed(4);
+                                theURL = 'https://api.apixu.com/v1/current.json?key=aee1f4bcd581463f8c3104119182910&q=' + lat.toFixed(4) + ',' + lng.toFixed(4);
                                 $.ajax({
                                     url: theURL,
                                     success: function (data) {
@@ -160,4 +160,4 @@
                     });
                 }
             });
-        });
+});
