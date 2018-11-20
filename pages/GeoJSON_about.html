@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+Template Name: Hoppler
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Tierra | About GeoJSON</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" href="../images/demo/gallery/ModernXP-73-Globe-icon.png" sizes="16x16" type="image/png"/>
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+  
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/cities.jpg'); background-attachment: fixed"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="../index.html">Tierra</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="../index.html">Home</a></li>
+          <li><a class="drop" href="#">Explore</a>
+            <ul>
+              <li><a href="earthquakes.html">Earthquakes</a></li>
+              <li><a href="weather.html">Weather</a></li>
+              <li><a href="volcanoes.html">Volcanoes</a></li>
+            </ul>
+          </li>
+           <li class="inactive"><a href="../index.html">Overview</a></li>
+          <li class="inactive"><a href="authors.html">Authors</a></li>
+          <li class="active"><a href="GeoJSON_about.html">About GeoJSON</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+
+  <!-- ################################################################################################ -->
+
+  <section id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="GeoJSON_about.html">About GeoJSON</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <h6 class="heading">About GeoJSON</h6>
+    <!-- ################################################################################################ -->
+  </section>
+  <!-- ################################################################################################ -->
+</div>
+
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ############################################################################################### -->
+    <div class="content"> 
+      
+      <div id="comments">
+        <h1>What is GeoJSON?</h1>
+           <p>
+        <strong>GeoJSON</strong> is a format for encoding a variety of <i>geographic data structures</i>. A GeoJSON object may represent a geometry, a feature, or a collection of features. GeoJSON is also an open mapping standard that uses text to describe geographical features, locations, and attributes, based on <b>JSON</b>.</p>
+            
+          <p>A complete GeoJSON data structure is always an object. In GeoJSON, an object consists of a collection of <strong>name/value pairs</strong> – also called members. For each member, the name is always a string. Member values are either a <i>string, number, object, array or one of the literals: true, false, and null</i>.</p>
+      
+      <pre id="pre-example">
+      <h1>Example</h1>
+      </pre>
+      <div id="example">
+      <pre>  
+var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Coors Field",
+        "amenity": "Baseball Stadium",
+        "popupContent": "This is where the Rockies play!"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-104.99404, 39.75621]
+    }
+};
+ </pre>
+        
+      </div>
+         
+      <div id="comments1">
+          <h1>What is used for?</h1>
+          <p><strong>GeoJSON</strong> is used in a variety of web and mobile applications, and can help with geospatial mapping in applications, or even with spatial mapping overlays that do not exist in real life, such as overlays for augmented reality apps.</p>
+        <p>GeoJSON is popular for use with <a href="https://leafletjs.com/examples/geojson/">Leaflet</a>, <a href="https://www.mongodb.com">MongoDB</a>, and <a href="https://www.mapbox.com/">Mapbox</a>, with Mapbox Editor for data transport and transformation. <a href="https://www.zymr.com/what-is-geojson/"><u>Click here to read more</u>...</a></p> 
+                  </div>
+ <div id="comments1">
+          <h1>Why use GeoJson?</h1>
+        <p>GeoJson is particularly useful when you have a <i>repeatable formula</i> that can be used across a wide variety of applications. And because it is geo data, you can easily make operations like transformations with the data contained within. It can also be used directly with the <i>Google Maps API</i> with the <u>loadGeoJson()</u> and <u>addGeoJson()</u> calls.</p>
+      </div>
+      <div id="comments1">   
+   <h1>GeoJson Objects</h1>
+   <p>GeoJSON always consists of a single object. This object (referred to as the GeoJSON object below) represents a geometry, feature, or collection of features.</p></div>
+        
+        <div id="objectList">
+            <ul>
+                <li>The GeoJSON object may have any number of members (name/value pairs).</li>
+                <li>The GeoJSON object must have a member with the name "type". This member’s value is a string that determines the type of the GeoJSON object.</li>
+                <li>The value of the type member must be one of: "Point", "MultiPoint", "LineString", "MultiLineString", "Polygon", "MultiPolygon", "GeometryCollection", "Feature", or "FeatureCollection". The case of the type member values must be as shown here.</li>
+                <li>A GeoJSON object may have an optional "crs" member, the value of which must be a coordinate reference system object (see 3. Coordinate Reference System Objects).</li>
+                <li>A GeoJSON object may have a "bbox" member, the value of which must be a bounding box array (see 4. Bounding Boxes).</li>
+            </ul> 
+      </div>
+        <div id="geometry">
+        <h1>Geometry Objects</h1>
+            <p>A GeoJSON geometry object of any type other than "GeometryCollection" must have a member with the name "coordinates". The value of the coordinates member is always an array. The structure for the elements in this array is determined by the type of geometry.</p>
+            A geometry is a GeoJSON object where the type member’s value is one of the following strings: 
+                <ul>
+                    <li><u>Point</u></li>
+                    <li><u>MultiPoint</u></li>
+                    <li><u>LineString</u></li>
+                    <li><u>MultiLineString</u></li>
+                    <li><u>Polygon</u></li>
+                    <li><u>MultiPolygon</u></li>
+                    <li><u>Geometry Collection</u></li>
+                    <li><u>Positions</u></li>
+      </ul></div>
+        
+        </div>
+    
+        <h1>What is the standard?</h1>
+        <p>Each GeoJSON element contains one object, whether it’s a geometry object, in the form of a point, line, or polygon (or multi-object) which contains one or more positions/coordinates, or a feature object, which contains a geometry object, and possibly various properties, which could be any type of JSON object in a key-value pair.</p>
+        <pre>For example, a basic FeatureCollection to describe mapped elements:</pre>
+        <div id="example">
+        <pre>{
+    "type" : "FeatureCollection",
+
+    "features" : [
+
+    {
+
+    "type" : "Feature",
+
+    "geometry" : { "type" : "Point", "coordinates" : [ 22.0, 0.3 ] },
+
+    "properties" : { "name" : "My house", "description" : “Where I live" }
+
+    }
+
+    {
+
+    "type" : "Feature",
+
+    "geometry" : { "type" : "LineString", "coordinates" : [ [ 21.2, 10.1 ], [23.0, 11.2], [24.5, 11.3] ] },
+
+    "properties" : { "name" : "Route taken", "description" : “Getting across the country" }
+
+    }
+
+    ]
+} 
+    </pre>
+        
+        </div>
+        
+    </div>
+    <pre>View this <a href="http://geojson.org/geojson-spec.html"><u>example page</u></a> to see in detail GeoJSON objects,  layer and examples.</pre>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+
+<!-- ################################################################################################ -->
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Integrated Project II Submission by group 2</p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+
+<!-- ################################################################################################ -->
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

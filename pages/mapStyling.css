@@ -1,0 +1,5 @@
+/* set the map height for the volcanoes explicitly */
+#map {
+            height: 400px;
+            width: 100%;
+        }
