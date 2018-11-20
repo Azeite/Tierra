@@ -1,4 +1,4 @@
-var map;
+        var map;
         //initMap() called when Google Maps API code is loaded - when web page is opened/refreshed 
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -160,4 +160,4 @@ var map;
                     });
                 }
             });
-});
+        });
