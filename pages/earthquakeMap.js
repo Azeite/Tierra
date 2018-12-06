@@ -117,6 +117,8 @@
                                 content: "<h3>" + val.properties.title + "</h3><br>Maginitude: "+magni+"<br>State: "+state+"<br><br> Time of Earthquake: "+date+"<br><p><a href='" + val.properties.url + "'>Details</a></p> "
                             });
                             marker.addListener('click', function (data) {
+                                //edited here 06/12/2018
+                                $('.weatherBox').css("display", "block");
                                 
                                 // We use the lat and lon as the parameters in the API call to weather service
                                 var lat = marker.position.lat();
