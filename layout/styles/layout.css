@@ -516,3 +516,8 @@ table a, #comments a{background-color:inherit;}
     display: none;
 }
 
+#submitCity
+{
+    margin-top: -40%;
+    margin-left:210px;
+}
