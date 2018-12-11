@@ -13,6 +13,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="icon" href="../images/demo/gallery/ModernXP-73-Globe-icon.png" sizes="16x16" type="image/png"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600|Raleway" rel="stylesheet">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="earthquakeMapsStyle.css" rel="stylesheet" type="text/css" media="all">
@@ -39,7 +40,7 @@ Licence URI: https://www.os-templates.com/template-terms
               <li><a href="volcanoes.html">Volcanoes</a></li>
             </ul>
           </li>
-           <li class="inactive"><a href="../index.html">Overview</a></li>
+           <li class="inactive"><a href="../index.html#overview">Overview</a></li>
           <li class="inactive"><a href="authors.html">Authors</a></li>
           <li class="inactive"><a href="GeoJSON_about.html">About GeoJSON</a></li>
         </ul>
@@ -72,10 +73,13 @@ Licence URI: https://www.os-templates.com/template-terms
     <div class="sidebar one_quarter first"> 
       <!-- ################################################################################################ -->
       <h6>View Weather</h6>
+    <p>Weather details will display here</p>
+    <div class="weatherBox">
     <div id="weatherImg"></div> <!--will display an icon describing the weather of the location on the map-->
     <div id="weatherInf"></div> <!--will give textual description of the icon above-->
         
     <div id="weatherInfAdd"></div> <!--will give additional textual description of the weather above-->
+    </div>
         
     </div>
     <!-- ################################################################################################ -->
@@ -87,12 +91,12 @@ Licence URI: https://www.os-templates.com/template-terms
         
       <form class="weatherForm" name="weatherForm">
           <div class="one_third first">
-            <label for="latitude">latitude <span>*</span></label>
-            <input type="latitude" name="latitude" id="latitude"  size="22" required>
+            
+            <input type="latitude" name="latitude" id="latitude" placeholder="latitude" size="22" required>
           </div>
            <div class="one_third">
-            <label for="longitude">longitude <span>*</span></label>
-            <input type="text" name="longitude" id="longitude"  size="22" required>
+           
+            <input type="text" name="longitude" id="longitude" placeholder="longitude" size="22" required>
           </div>
           <div class="one_third">
               &nbsp;
@@ -102,15 +106,18 @@ Licence URI: https://www.os-templates.com/template-terms
           </div>
 
         </form>
-        
+        &nbsp;
+        <p>Or you could enter a city name and click GO for weather details. </p>
         <form class="weatherFormTwo" name="weatherFormTwo">
           <div class="one_third first">
-              <label for="cityName"><strong>Or</strong> enter city name <span>*</span></label>
-            <input type="cityName" name="cityName" id="cityName"  size="22" required>
+              
+            <input type="cityName" name="cityName" id="cityName" placeholder="city name" size="22" required>
               
               &nbsp;
-              
-              <input type="button" id="submitCity" name="submitCity" value="Go" class="btn" onclick="loadCityWeather()">
+          </div>
+
+          <div class="one_third">
+            <input type="button" id="submitCity" name="submitCity" value="Go" class="btn" onclick="loadCityWeather()">
           </div>
           
         </form>

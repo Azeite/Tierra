@@ -54,15 +54,19 @@ img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; l
 
 /* Fonts
 --------------------------------------------------------------------------------------------------------------- */
-body, input, textarea, select{font-family:Verdana, Geneva, sans-serif;}
-h1, h2, h3, h4, h5, h6, .heading{font-family:Georgia, "Times New Roman", Times, serif;}
+/*body, input, textarea, select{font-family:Verdana, Geneva, sans-serif;}*/
+/*h1, h2, h3, h4, h5, h6, .heading{font-family:Georgia, "Times New Roman", Times, serif;}*/
+body, input, textarea, select{font-family: 'Raleway', sans-serif;}
+h1, h2, h3, h4, h5, h6, .heading{font-family: 'Montserrat', sans-serif;}
+
 
 
 /* Forms
 --------------------------------------------------------------------------------------------------------------- */
 form, fieldset, legend{margin:0; padding:0; border:none;}
 legend{display:none;}
-label, input, textarea, select, button{display:block; resize:none; outline:none; color:inherit; font-size:inherit; font-family:inherit; vertical-align:middle;}
+label, input, textarea, select{display:block; resize:none; outline:none; color:inherit; font-size:inherit; font-family:inherit; vertical-align:middle;}
+button { vertical-align: bottom; }
 label{margin-bottom:5px;}
 :required, :invalid{outline:none; box-shadow:none;}
 

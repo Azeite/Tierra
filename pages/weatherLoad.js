@@ -5,6 +5,8 @@ var cityName = document.getElementById("cityName").value;
 
 
 myURL = 'https://api.apixu.com/v1/current.json?key=aee1f4bcd581463f8c3104119182910&q=' + cityName;//creates URL to be used to query apixu for weather data
+
+$('.weatherBox').css("display", "block");
                                 $.ajax({
                                     url: myURL,
                                     success: function (data) {
@@ -47,6 +49,8 @@ var latValue = parseFloat(strLatValue, 10);//converts string to a float
 var longValue = parseFloat(strLongValue, 10);//converts string to a float
     
 myURL = 'https://api.apixu.com/v1/current.json?key=aee1f4bcd581463f8c3104119182910&q=' + latValue.toFixed(7) + ',' + longValue.toFixed(7);//creates URL to be used to query apixu for weather data
+
+$('.weatherBox').css("display", "block");
                                 $.ajax({
                                     url: myURL,
                                     success: function (data) {

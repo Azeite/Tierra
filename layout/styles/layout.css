@@ -281,7 +281,7 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#CBCBCB; background-color:#2B2F32;}
-a{color:#FE0000;}
+a{color:#b22730;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
@@ -312,12 +312,12 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 
 
 /* Content Area */
-.sectiontitle .heading::after{background-color:#FE0000;}
+.sectiontitle .heading::after{background-color:#b22730;}
 
 .services li article{color:inherit; background-color:inherit;}
 .services li article a{color:inherit;}
 .services li article:hover{color:inherit; background-color:#FFFFFF; box-shadow:0px 0px 15px rgba(0,0,0,.2);}
-.services li article:hover > a{color:#FE0000;}
+.services li article:hover > a{color:#b22730;}
 
 .pricelist{background-color:#FFFFFF;}
 .pricelist > li:nth-child(2){color:#FFFFFF; background-color:#2B2F32;}
@@ -330,7 +330,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 #footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.1);}
 
 #footer nav a{color:inherit;}
-#footer nav li:first-child a, #footer nav a:hover{color:#FE0000;}
+#footer nav li:first-child a, #footer nav a:hover{color:#b22730;}
 
 #footer .faico a{color:inherit; background-color:#2B2F32;}
 #footer .faico a:hover{color:#FFFFFF;}
@@ -343,27 +343,27 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 
 
 /* Navigation */
-#mainav li a{color:#FFFFFF;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#FE0000; background-color:inherit;}
+#mainav li a{color:#FFFFFF; font-weight: bold;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#b22730; background-color:inherit;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(51,54,59,.65)/* #33363B */; border-color:rgba(51,54,59,.65)/* #33363B */;}
-#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#FE0000;}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#b22730;}
 #mainav form select{color:#FFFFFF; background-color:#2B2F32; border-color:rgba(255,255,255,.2);/* #FFFFFF */}
 
 #breadcrumb a{color:inherit; background-color:inherit;}
-#breadcrumb li:last-child a{color:#FE0000;}
+#breadcrumb li:last-child a{color:#b22730; font-weight: bold;}
 
 .container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
-.container .sidebar nav a:hover{color:#FE0000;}
+.container .sidebar nav a:hover{color:#b22730;}
 
 .pagination a, .pagination strong{border-color:#D7D7D7;}
-.pagination .current *{color:#FFFFFF; background-color:#FE0000;}
+.pagination .current *{color:#FFFFFF; background-color:#b22730;}
 
-#backtotop{color:#FFFFFF; background-color:#FE0000;}
+#backtotop{color:#FFFFFF; background-color:#b22730;}
 
 
 /* Tables + Comments */
 table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
-#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#FE0000;}
+#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#b22730;}
 th{color:#FFFFFF; background-color:#373737;}
 tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
@@ -516,8 +516,13 @@ table a, #comments a{background-color:inherit;}
     display: none;
 }
 
-#submitCity
-{
-    margin-top: -40%;
-    margin-left:210px;
+#longitude, #latitude, #cityName{
+	height: 40px;
+}
+
+/* Making the text content within the "pre" tag on the GeoJSON_about page wrap around for responsivity.
+-----------------------------------------------------------------------------------------------------------*/
+pre {
+	white-space: pre-wrap;
+	word-break: keep-all;
 }

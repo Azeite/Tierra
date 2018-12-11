@@ -103,7 +103,8 @@
                             var marker = new google.maps.Marker({
                                 position: latLng,
                                 map: map,
-                                label: val.properties.mag.toString() // Whatever label you like. This one is the magnitude of the earthquake
+                                // label: val.properties.mag.toString() 
+                                // Whatever label you like. This one is the magnitude of the earthquake
                             });
                                 
                                 markers[i++] = marker; // Add the marker to array to be used by clusterer
